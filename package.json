@@ -13,7 +13,7 @@
     "url": "https://github.com/lecle/httpservice.git"
   },
   "keywords": [
-    "microservice,manager"
+    "microservice,http"
   ],
   "author": "Daesun",
   "license": "MIT",
@@ -25,6 +25,7 @@
     "assert": "~1.2.0",
     "istanbul": "^0.3.5",
     "mocha": "~2.0.1",
-    "restify": "^2.8.4"
+    "restify": "^2.8.4",
+    "underscore": "^1.7.0"
   }
 }
