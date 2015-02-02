@@ -39,7 +39,7 @@ describe('javascriptRoute', function() {
     describe('rest api post', function() {
         it('should route without error', function(done) {
 
-            client.post('/1/apps', JSON.stringify({"_ApplicationId":"supertoken", "_SessionToken":"supertoken", "_method":"POST", "appname":"test14"}), function (err, req, res, obj) {
+            client.post('/1/apps', JSON.stringify({"_ApplicationId":"supertoken", "_JavaScriptKey":"supertoken", "_SessionToken":"supertoken", "_MasterKey":"supertoken", "_method":"POST", "appname":"test14"}), function (err, req, res, obj) {
 
                 assert.equal(201, res.statusCode);
 
