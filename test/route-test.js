@@ -10,14 +10,16 @@ describe('route', function() {
 
         var dummyContainer = {
             addListener : function(){},
-            getService : function(name, callback) {
+            getService : function(name) {
 
-                callback(null, {send : function(command, data, callback) {
+                return {
+                    then : function(callback){ callback({send : function(command, data, callback) {
 
-                    callback(null, {data : {test : 'OK'}});
-                }});
+                        callback(null, {data : {test : 'OK'}});
+                    }})},
+                    fail : function(){}
+                };
             }
-
         };
 
         server.init(dummyContainer, function(err) {
