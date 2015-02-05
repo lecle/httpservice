@@ -16,8 +16,10 @@ describe('route', function() {
                     then : function(callback){ callback({send : function(command, data, callback) {
 
                         callback(null, {data : {test : 'OK'}});
-                    }})},
-                    fail : function(){}
+                    }});
+
+                        return {fail : function(){}};
+                    }
                 };
             }
         };

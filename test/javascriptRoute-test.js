@@ -17,11 +17,12 @@ describe('javascriptRoute', function() {
                     then : function(callback){ callback({send : function(command, data, callback) {
 
                         callback(null, {data : {test : 'OK'}});
-                    }})},
-                    fail : function(){}
+                    }});
+
+                        return {fail : function(){}};
+                    }
                 };
             }
-
         };
 
         server.init(dummyContainer, done);
