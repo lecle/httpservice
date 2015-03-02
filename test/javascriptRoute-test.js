@@ -22,7 +22,8 @@ describe('javascriptRoute', function() {
                         return {fail : function(){}};
                     }
                 };
-            }
+            },
+            getConfig:function(){return null;}
         };
 
         server.init(dummyContainer, done);
