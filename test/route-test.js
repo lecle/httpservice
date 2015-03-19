@@ -54,6 +54,16 @@ describe('route', function() {
                 done(err);
             });
         });
+
+        it('should ping without error', function(done) {
+
+            client.get('/ping', function (err, req, res, obj) {
+
+                assert.equal(200, res.statusCode);
+
+                done(err);
+            });
+        });
     });
 
 });
