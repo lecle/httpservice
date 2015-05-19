@@ -23,6 +23,7 @@ describe('javascriptRoute', function() {
                     }
                 };
             },
+            log : { info : function(log) { console.log(log)}, error : function(log) { console.log(log)}},
             getConfig:function(){return null;}
         };
 

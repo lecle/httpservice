@@ -2,7 +2,11 @@ var server = require('../lib/server');
 var restify = require('restify');
 var assert = require('assert');
 
-var dummyContainer = {addListener:function(){}, getConfig:function(){return null;}};
+var dummyContainer = {
+    addListener:function(){},
+    getConfig:function(){return null;},
+    log : { info : function(log) { console.log(log)}, error : function(log) { console.log(log)}}
+};
 
 describe('server', function() {
     describe('#init()', function() {
