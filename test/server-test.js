@@ -33,7 +33,7 @@ describe('server', function() {
 
                     assert.equal(204, res.statusCode);
 
-                    done(err);
+                    server.close(done);
                 });
             });
         });
