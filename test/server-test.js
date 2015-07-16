@@ -14,7 +14,8 @@ describe('server', function() {
 
             server.init(dummyContainer, function(err) {
 
-                server.close(done);
+                server.close(function() {});
+                done();
             });
         });
     });
@@ -33,7 +34,8 @@ describe('server', function() {
 
                     assert.equal(204, res.statusCode);
 
-                    server.close(done);
+                    server.close(function() {});
+                    done();
                 });
             });
         });

@@ -42,7 +42,8 @@ describe('route', function() {
     });
 
     after(function(done) {
-        server.close(done);
+        server.close(function() {});
+        done();
     });
 
     describe('rest api post', function() {

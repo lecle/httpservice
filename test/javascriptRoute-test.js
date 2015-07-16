@@ -27,8 +27,6 @@ describe('javascriptRoute', function() {
             getConfig:function(){return null;}
         };
 
-        server.init(dummyContainer, done);
-
         client = restify.createStringClient({
             url: 'http://localhost:3337',
             version: '~1.0',
@@ -36,10 +34,13 @@ describe('javascriptRoute', function() {
                 'x-noserv-test' : 'javascriptsdk'
             }
         });
+
+        server.init(dummyContainer, done);
     });
 
     after(function(done) {
-        server.close(done);
+        server.close(function() {});
+        done();
     });
 
     describe('rest api post', function() {
