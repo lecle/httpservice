@@ -22,7 +22,7 @@ describe('route', function() {
                     }
                 };
             },
-            log : { info : function(log) { console.log(log)}, error : function(log) { console.log(log)}},
+            log : { info : function(log) { console.log(log)}, debug : function(log) { console.log(log)}, error : function(log) { console.log(log)}},
             getConfig:function(){return null;}
         };
 
